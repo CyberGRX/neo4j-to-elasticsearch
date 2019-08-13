@@ -1,0 +1,12 @@
+version : 0.2
+
+env:
+  parameter-store:
+    TOKEN: "/codebuild/apitoken"
+    NEXUS_PASSWORD: "/codebuild/nexus/helm-password"
+  variables:
+    GO111MODULE: on
+phases:
+  install:
+    commands:
+      - echo deploying into $PROJECT to ${NAMESPACE}
