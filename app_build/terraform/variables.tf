@@ -1,7 +1,7 @@
 #Boiler Plate Variables
 variable "account_numbers" {
   description = "Map of account numbers matched to environement"
-  type        = "map"
+  type        = map(string)
 
   default = {
     main    = "551321121225"
@@ -14,12 +14,13 @@ variable "account_numbers" {
 
 variable "env" {
   description = "The environment to deploy into"
-  type        = "string"
+  type        = string
   default     = "core"
 }
 
 variable "region" {
   description = "The AWS region"
-  type        = "string"
+  type        = string
   default     = "us-east-1"
 }
+
